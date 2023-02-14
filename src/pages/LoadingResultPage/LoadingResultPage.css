@@ -1,0 +1,51 @@
+#LoadingResultPage > .cont .msg {
+  line-height: 1.5em;
+  font-family: ttangsbudaejjigae;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#LoadingResultPage > .cont > .img {
+  margin: 2rem auto 0 auto;
+}
+
+#LoadingResultPage > .cont > .img > .circle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+}
+
+#LoadingResultPage > .cont > .img > .circle > .country-logo {
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: translate(-50%, -50%) scale(50%);
+    opacity: 0;
+  }
+  8.3% {
+    transform: translate(-50%, -50%) scale(100%);
+    opacity: 1;
+  }
+  8.4%,
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #LoadingResultPage > .cont > .img > .circle {
+    width: 200px;
+    height: 200px;
+  }
+}

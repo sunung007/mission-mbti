@@ -1,13 +1,63 @@
+body,
+button {
+  font-family: "gangwonedu", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-size: 1.5em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--blue);
+}
+
+.page {
+  width: calc(100% - 4rem);
+  max-width: 1000px;
+
+  padding: 4rem 1rem 2rem 1rem;
+  background-color: white;
+
+  box-shadow: 0 0 6px 8px rgb(0 0 0 / 30%);
+}
+
+:root {
+  --blue: #054d95;
+  --yellow: #ffcf29;
+  --light-gray: #efefef;
+  --pink: #fb2576;
 }

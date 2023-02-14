@@ -1,0 +1,45 @@
+#ResultPage {
+  text-align: center;
+}
+
+#ResultPage > .title {
+  font-size: 1.3em;
+  font-family: ttangsbudaejjigae;
+  line-height: 1.5em;
+  text-align: center;
+}
+#ResultPage > .title > .country {
+  font-size: 2em;
+  line-height: 1.5em;
+  color: var(--blue);
+}
+
+#ResultPage > .share .copy-msg {
+  font-size: 0.8em;
+  color: var(--pink);
+  margin: -0.8em 0 1em 0;
+}
+
+#ResultPage > .share .btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+#ResultPage > .share .btns li {
+  cursor: pointer;
+}
+#ResultPage > .share .btns img {
+  width: 3rem;
+}
+
+#ResultPage > .home-btn {
+  margin-top: 2em;
+  font-size: 0.8em;
+  transition: background-color 150ms ease-in;
+}
+#ResultPage > .home-btn:hover {
+  color: white;
+  background-color: var(--blue);
+}

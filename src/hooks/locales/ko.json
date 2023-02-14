@@ -1,0 +1,69 @@
+{
+  "App": {
+    "footer": {
+      "info": {
+        "line1": "본 검사지는 대한예수교 장로회 충현교회 70주년 선교주일을 기념하여 제작되었습니다.",
+        "line2": "본 사이트에 대한 저작권 및 소유권은 충현교회에 있으며, 무단 복제/사용 시 책임은 개인에게 있습니다."
+      },
+      "btns": {
+        "toChurch": "충현교회 바로가기",
+        "toGether": "게더타운 바로가기"
+      },
+      "churchImg": {
+        "alt": "충현교회"
+      }
+    }
+  },
+  "MainPage": {
+    "title": {
+      "line1": "나의 찰떡",
+      "line2": "선교지",
+      "info": {
+        "line1": "나의 찰떡 선교지는 어디일까요?",
+        "line2": "나에게 어울리는 선교지를 찾아보세요!"
+      }
+    },
+    "body": {
+      "StartResearchBtn": "검사 시작하기"
+    },
+    "share": {
+      "title": "공유하기",
+      "alertMsg": {
+        "link": "링크가 클립보드로 복사되었어요!"
+      },
+      "btns": {
+        "kakaotalk": "카카오톡 공유하기",
+        "link": "링크 복사하기"
+      }
+    }
+  },
+  "LoadingResultPage": {
+    "msg": {
+      "line1": "어울리는 선교지를 찾고 있어요",
+      "line2": "조금만 기다려주세요"
+    }
+  },
+  "ResultPage": {
+    "countries": {
+      "cambodia": "캄보디아",
+      "india": "인도",
+      "indonesia": "인도네시아",
+      "japan": "일본",
+      "kazakhstan": "카자흐스탄",
+      "laos": "라오스",
+      "mongolia": "몽골",
+      "myanmar": "미얀마",
+      "nepal": "네팔",
+      "srilanka": "스리랑카",
+      "thai": "태국",
+      "vietnam": "베트남"
+    },
+    "share": {
+      "title": "공유하기",
+      "btns": {
+        "kakaotalk": "카카오톡 공유하기",
+        "link": "링크 복사하기"
+      }
+    }
+  }
+}

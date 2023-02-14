@@ -1,0 +1,60 @@
+#MainPage {
+  text-align: center;
+}
+
+#MainPage > .title .line1,
+#MainPage > .title .line2 {
+  font-family: tangsbudaejjigae;
+  line-height: 1.3em;
+}
+
+#MainPage > .title .line1 {
+  font-size: 2.5rem;
+}
+#MainPage > .title .line2 {
+  font-size: 4rem;
+}
+
+#MainPage > .body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#MainPage #StartResearchBtn {
+  width: 100%;
+  max-width: 30rem;
+  height: 10rem;
+
+  font-size: 1.5rem;
+  font-weight: 900;
+
+  margin: 1rem auto;
+  background-color: var(--blue);
+  color: white;
+
+  transition: background-color 150ms ease-in;
+}
+
+#MainPage #StartResearchBtn:hover {
+  background-color: var(--yellow);
+}
+
+#MainPage > .share .copy-msg {
+  font-size: 0.8em;
+  color: var(--pink);
+  margin: -0.8em 0 1em 0;
+}
+
+#MainPage > .share .btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+#MainPage > .share .btns li {
+  cursor: pointer;
+}
+#MainPage > .share .btns img {
+  width: 3rem;
+}
