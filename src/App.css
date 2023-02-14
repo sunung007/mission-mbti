@@ -47,17 +47,20 @@
 
 @font-face {
   font-family: "tangsbudaejjigae";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2")
-    format("woff2");
+  src: url("./assets/fonts/tangsbudaejjigae_bold") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "tangsbudaejjigae";
+  src: url("./assets/fonts/tangsbudaejjigae_medium") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "score-dream";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
-    format("woff");
-  font-weight: normal;
+  font-family: "tangsbudaejjigae";
+  src: url("./assets/fonts/tangsbudaejjigae_light") format("woff2");
+  font-weight: lighter;
   font-style: normal;
 }
 

@@ -4,7 +4,8 @@
 
 #ResultPage > .title {
   font-size: 1.3em;
-  font-family: ttangsbudaejjigae;
+  font-family: tangsbudaejjigae;
+  font-weight: bold;
   line-height: 1.5em;
   text-align: center;
 }
@@ -12,6 +13,10 @@
   font-size: 2em;
   line-height: 1.5em;
   color: var(--blue);
+}
+
+#ResultPage > .info {
+  margin: 1em 0;
 }
 
 #ResultPage > .share .copy-msg {

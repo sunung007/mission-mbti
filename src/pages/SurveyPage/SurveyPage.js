@@ -66,7 +66,7 @@ export default function SurveyPage() {
     setAnswers([...tmpAnswers]);
   };
 
-  const nextPageOnClicked = () => {
+  const confirmAllQuestionChecked = () => {
     for (
       let i = NUM_OF_QUESTION_IN_A_PAGE_IN_SURVEY_PAGE * (pageNumber[0] - 1);
       i < NUM_OF_QUESTION_IN_A_PAGE_IN_SURVEY_PAGE * pageNumber[0];
@@ -76,17 +76,25 @@ export default function SurveyPage() {
         console.log("There is no checked answer");
         setAlertMsg("모든 질문에 답변해주세요.");
         // 경고 메시지
-        return;
+        return false; // 체크 안된 답변 있음
       }
     }
-    setAlertMsg("");
-    setPageNumber([pageNumber[0] + 1, pageNumber[1]]);
+    return true; // 체크 안됨 답변 없음
+  };
+
+  const nextPageOnClicked = () => {
+    if (confirmAllQuestionChecked()) {
+      setAlertMsg("");
+      setPageNumber([pageNumber[0] + 1, pageNumber[1]]);
+    }
   };
 
   const endPageOnClicked = () => {
-    navigate("/loadingResult", {
-      state: answers,
-    });
+    if (confirmAllQuestionChecked()) {
+      navigate("/loadingResult", {
+        state: answers,
+      });
+    }
   };
 
   useEffect(() => {

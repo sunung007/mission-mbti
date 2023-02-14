@@ -5,6 +5,7 @@
 #MainPage > .title .line1,
 #MainPage > .title .line2 {
   font-family: tangsbudaejjigae;
+  font-weight: bold;
   line-height: 1.3em;
 }
 
