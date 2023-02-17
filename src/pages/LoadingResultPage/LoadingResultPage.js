@@ -17,12 +17,12 @@ export default function LoadingResultPage() {
   };
 
   useEffect(() => {
-    // state 비었을 떄 오류처리
+    // TODO : state 비었을 떄 오류처리
     console.log("state");
     console.log(state);
 
-    // 결과 계산
-    let result = "japan";
+    // TODO : 결과 계산
+    let result = "thai";
 
     // 3초 뒤 결과 페이지로 전달/이동
     const timer = setTimeout(
@@ -48,7 +48,7 @@ export default function LoadingResultPage() {
             {COUNTRY_LIST?.map((c, cIndex) => (
               <img
                 className="country-logo"
-                src={require(`../../assets/images/round_country/${c}.png`)}
+                src={require(`../../assets/images/round_country_logos/${c}.png`)}
                 alt={c}
                 key={c || cIndex}
                 style={{

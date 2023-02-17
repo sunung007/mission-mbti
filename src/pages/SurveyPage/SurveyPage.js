@@ -1,6 +1,7 @@
 import "./SurveyPage.css";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
+import {scrollToTopFunc} from "../../hooks/ScrollToTop";
 import {
   NO,
   NUM_OF_QUESTION_IN_A_PAGE_IN_SURVEY_PAGE,
@@ -96,6 +97,10 @@ export default function SurveyPage() {
       });
     }
   };
+
+  useEffect(() => {
+    scrollToTopFunc();
+  }, [pageNumber]);
 
   useEffect(() => {
     if (questions?.length > 0) {

@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+#ResultPage .subsection-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
 #ResultPage > .title {
   font-size: 1.3em;
   font-family: tangsbudaejjigae;
@@ -15,8 +20,88 @@
   color: var(--blue);
 }
 
-#ResultPage > .info {
+#ResultPage > .body > div {
   margin: 1em 0;
+}
+#ResultPage > .body > div:nth-child(2n-1) {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--light-gray);
+}
+
+#ResultPage > .body > .cont1 > .description {
+  padding: 1rem;
+
+  color: white;
+  background-color: var(--blue);
+
+  font-weight: bold;
+  font-family: tangsbudaejjigae;
+
+  border-radius: 1rem;
+}
+
+#ResultPage > .body > .cont1 > .main-img {
+  width: 100%;
+  line-height: 0;
+
+  margin: 1rem 0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+#ResultPage > .body > .cont1 > .main-img img {
+  width: 100%;
+}
+
+#ResultPage > .body > .cont1 > .info {
+  line-height: 1.3em;
+}
+#ResultPage > .body > .cont1 > .info > p:last-child {
+  margin-bottom: 0.5em;
+}
+
+#ResultPage > .body > .cont1 > .map {
+  width: 100%;
+  margin-top: 1rem;
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+}
+
+#ResultPage > .body > .cont1 > .map > .google-map {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+#ResultPage > .body > .cont1 > .map > .world-map img {
+  width: 100%;
+}
+
+#ResultPage > .body > .cont2 li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+#ResultPage > .body > .cont2 .list-icon {
+  height: 0.8em;
+}
+
+#ResultPage > .body > .cont3 > .gether-btn {
+  margin-top: 0.5em;
+  font-size: 0.8em;
+
+  color: white;
+  background-color: var(--blue);
+
+  transition: background-color 150ms ease-in;
+}
+#ResultPage > .body > .cont3 > .gether-btn:hover {
+  color: black;
+  background-color: var(--yellow);
 }
 
 #ResultPage > .share .copy-msg {
@@ -40,11 +125,21 @@
 }
 
 #ResultPage > .home-btn {
-  margin-top: 2em;
+  margin-top: 1rem;
   font-size: 0.8em;
   transition: background-color 150ms ease-in;
 }
 #ResultPage > .home-btn:hover {
   color: white;
   background-color: var(--blue);
+}
+
+@media screen and (max-width: 700px) {
+  #ResultPage > .body > .cont1 > .map {
+    grid-template-columns: 100%;
+    grid-template-rows: 200px 300px;
+  }
+  #ResultPage > .body > .cont1 > .map > .world-map img {
+    height: 200px;
+  }
 }

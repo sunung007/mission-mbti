@@ -29,6 +29,7 @@ a {
 }
 
 button {
+  color: black;
   border: none;
   border-radius: 1rem;
   padding: 0.5em 1em;

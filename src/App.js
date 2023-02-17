@@ -5,6 +5,7 @@ import SurveyPage from "./pages/SurveyPage/SurveyPage";
 import LoadingResultPage from "./pages/LoadingResultPage/LoadingResultPage";
 import {useTranslation} from "react-i18next";
 import ResultPage from "./pages/ResultPage/ResultPage";
+import ScrollToTop from "./hooks/ScrollToTop";
 
 function App() {
   const {t} = useTranslation();
@@ -14,6 +15,7 @@ function App() {
       <header className="App-header"></header>
 
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/survey" element={<SurveyPage />} />
@@ -41,7 +43,7 @@ function App() {
           </button>
           <button className="church-btn">
             <a
-              href="http://www.choonghyunchurch.or.kr/main/main.html"
+              href="https://app.gather.town/app/VYEVvurYdVLuQ8NF/Church"
               target={"_blank"}
               rel="noreferrer"
             >

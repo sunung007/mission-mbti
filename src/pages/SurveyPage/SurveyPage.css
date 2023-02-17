@@ -97,9 +97,9 @@
   background-color: var(--pink);
 }
 
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 250px) {
   #SurveyPage > .questions .q > .btns {
     grid-template-columns: 1fr;
     grid-template-rows: 3.5rem 3.5rem;
   }
-}
+} */

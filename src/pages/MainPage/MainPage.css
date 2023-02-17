@@ -16,6 +16,11 @@
   font-size: 4rem;
 }
 
+#MainPage .subsection-title {
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
 #MainPage > .body {
   display: flex;
   flex-direction: column;
