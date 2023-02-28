@@ -2,6 +2,13 @@ import "./MainPage.css";
 import {useState} from "react";
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
+import KakaoShareButton from "../../components/KakaoShareButton/KakaoShareButton";
+import {ReactComponent as Title} from "../../assets/images/title.svg";
+import {ReactComponent as MainTopImage} from "../../assets/images/mainpage/mainpage_top.svg";
+import {ReactComponent as StartButton} from "../../assets/images/mainpage/mainpage_start.svg";
+import {ReactComponent as ToChurch} from "../../assets/images/mainpage/mainpage_to_choonghyun.svg";
+import {ReactComponent as ToGether} from "../../assets/images/mainpage/mainpage_to_gether.svg";
+import {ReactComponent as Globe} from "../../assets/images/mainpage/mainpage_globe_icon.svg";
 
 export default function MainPage() {
   const {t} = useTranslation();
@@ -10,10 +17,6 @@ export default function MainPage() {
 
   const surveyOnClicked = () => {
     navigate("/survey");
-  };
-
-  const shareToKakaotalk = () => {
-    window.alert("아직 준비되지 않은 기능이예요!");
   };
 
   const shareToLink = () => {
@@ -30,36 +33,56 @@ export default function MainPage() {
   return (
     <div id="MainPage" className="page">
       <div className="title">
-        <div className="line1">{t("MainPage.title.line1")}</div>
-        <div className="line2">{t("MainPage.title.line2")}</div>
-        <p className="info">
-          {t("MainPage.title.info.line1")}
-          <br />
-          {t("MainPage.title.info.line2")}
-        </p>
+        <div>
+          <MainTopImage className="top" />
+        </div>
+        <div>
+          <Title className="title" />
+        </div>
       </div>
 
       <div className="body">
-        <button id="StartResearchBtn" type={"button"} onClick={surveyOnClicked}>
+        <div onClick={surveyOnClicked} className="text">
           {t("MainPage.body.StartResearchBtn")}
-        </button>
+        </div>
+        <div className="img" onClick={surveyOnClicked}>
+          <StartButton />
+        </div>
+      </div>
+
+      <div className="to-family">
+        <a
+          href="http://www.choonghyunchurch.or.kr/main/main.html"
+          target={"_blank"}
+          rel="noreferrer"
+        >
+          <ToChurch />
+        </a>
+        <a
+          href="https://app.gather.town/app/VYEVvurYdVLuQ8NF/Church"
+          target={"_blank"}
+          rel="noreferrer"
+        >
+          <ToGether />
+        </a>
       </div>
 
       <div className="share">
-        <div className="subsection-title">{t("MainPage.share.title")}</div>
+        <div className="subsection-title">
+          <div>
+            <Globe />
+          </div>
+          <div>{t("MainPage.share.title")}</div>
+          <div>
+            <Globe />
+          </div>
+        </div>
 
         {copyMsg?.length > 0 && <div className="copy-msg">{copyMsg}</div>}
 
-        {/* TODO : 버튼 클릭시 행동 */}
         <div className="btns">
-          <li
-            title={t("MainPage.share.btns.kakaotalk")}
-            onClick={shareToKakaotalk}
-          >
-            <img
-              src={require("../../assets/images/share_logos/kakaotalk.png")}
-              alt={t("MainPage.share.btns.kakaotalk")}
-            />
+          <li title={t("MainPage.share.btns.kakaotalk")}>
+            <KakaoShareButton />
           </li>
           <li title={t("MainPage.share.btns.link")} onClick={shareToLink}>
             <img

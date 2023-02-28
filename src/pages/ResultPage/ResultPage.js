@@ -6,6 +6,7 @@ import {useLocation, useNavigate} from "react-router-dom";
 import {COUNTRY_LIST} from "../../assets/constants";
 import CountryGoogleMap from "./CountryGoogleMap";
 import CrossIcon from "../../assets/images/cross.png";
+import KakaoShareButton from "../../components/KakaoShareButton/KakaoShareButton";
 
 export default function ResultPage() {
   const {t} = useTranslation();
@@ -62,10 +63,6 @@ export default function ResultPage() {
   const [copyMsg, setCopyMsg] = useState("");
 
   const openGetherWindow = () => {
-    window.alert("아직 준비되지 않은 기능이예요!");
-  };
-
-  const shareToKakaotalk = () => {
     window.alert("아직 준비되지 않은 기능이예요!");
   };
 
@@ -163,15 +160,16 @@ export default function ResultPage() {
 
         {copyMsg?.length > 0 && <div className="copy-msg">{copyMsg}</div>}
 
-        {/* TODO : 버튼 클릭시 행동 */}
         <div className="btns">
-          <li
-            title={t("ResultPage.share.btns.kakaotalk")}
-            onClick={shareToKakaotalk}
-          >
-            <img
-              src={require("../../assets/images/share_logos/kakaotalk.png")}
-              alt={t("ResultPage.share.btns.kakaotalk")}
+          <li title={t("ResultPage.share.btns.kakaotalk")}>
+            <KakaoShareButton
+              msg={{
+                type: "result",
+                country: country?.nameLang,
+                // TODO : 링크 DB 이미지로 변경
+                imageUrl:
+                  "http://www.choonghyunchurch.or.kr/user/saveDir/awd/T/0/subMainImg_460833_default.jpg?itemTime=1676960594",
+              }}
             />
           </li>
           <li title={t("ResultPage.share.btns.link")} onClick={shareToLink}>

@@ -1,14 +1,6 @@
-/* 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-
 #MainFooter {
   width: 100%;
-  color: white;
-  font-size: 0.8em;
+  color: var(--blue);
 
   display: flex;
   flex-direction: column;
@@ -16,65 +8,47 @@
   align-items: center;
 
   text-align: center;
+
+  background-color: rgba(241, 235, 230, 55%);
+  border-radius: 50rem;
+  padding: 5rem 0 30rem 0;
+  margin: -5rem 0 -30rem 0;
 }
+
 #MainFooter > .container {
   width: calc(100% - 2rem);
   max-width: 700px;
   padding: 2rem 1rem;
 }
 
-#MainFooter .church-btn {
-  display: block;
-  margin: 0 auto 1em auto;
-  font-size: 0.8em;
-  background-color: white;
-  transition: background-color 150ms ease-in;
-}
-#MainFooter .church-btn a {
-  color: black;
-  text-decoration: none;
-}
-#MainFooter .church-btn:hover {
-  background-color: var(--yellow);
+#MainFooter > .container > p {
+  font-size: 0.7em;
 }
 
-#MainFooter .church-img {
-  max-width: 150px;
+#MainFooter > .container > .church-img {
+  max-width: 100px;
   display: block;
   margin: auto;
 }
-#MainFooter .church-img img {
-  width: 100%;
+#MainFooter > .container > .church-img path {
+  fill: var(--blue);
 }
 
 @font-face {
-  font-family: "tangsbudaejjigae";
-  src: url("./assets/fonts/tangsbudaejjigae_bold") format("woff2");
-  font-weight: bold;
+  font-family: "title1";
+  src: url("./assets/fonts/KCC-Ganpan.woff") format("woff");
   font-style: normal;
 }
+
 @font-face {
-  font-family: "tangsbudaejjigae";
-  src: url("./assets/fonts/tangsbudaejjigae_medium") format("woff2");
+  font-family: "body1";
+  src: url("./assets/fonts/LeferiPointWhite.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "tangsbudaejjigae";
-  src: url("./assets/fonts/tangsbudaejjigae_light") format("woff2");
-  font-weight: lighter;
+  font-family: "body1";
+  src: url("./assets/fonts/LeferiPointBlack.woff") format("woff");
+  font-weight: bold;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "gangwonedu";
-  font-weight: 300;
-  font-style: normal;
-  src: url("./assets/fonts/gangwonedu_light") format("woff");
-}
-@font-face {
-  font-family: "gangwonedu";
-  font-weight: 700;
-  font-style: normal;
-  src: url("./assets/fonts/gangwonedu_bold") format("woff");
 }

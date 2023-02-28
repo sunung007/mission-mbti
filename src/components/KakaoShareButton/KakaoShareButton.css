@@ -1,0 +1,8 @@
+#KakaoShareButton {
+  width: 100%;
+  max-width: 5rem;
+  cursor: pointer;
+}
+#KakaoShareButton > img {
+  width: 100%;
+}

@@ -19,6 +19,7 @@
     "react-i18next": "^12.1.5",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
+    "recoil": "^0.7.6",
     "svgo": "^3.0.2",
     "web-vitals": "^2.1.4"
   },

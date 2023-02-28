@@ -5,24 +5,12 @@
         "line1": "본 검사지는 대한예수교 장로회 충현교회 70주년 선교주일을 기념하여 제작되었습니다.",
         "line2": "본 사이트에 대한 저작권 및 소유권은 충현교회에 있으며, 무단 복제/사용 시 책임은 개인에게 있습니다."
       },
-      "btns": {
-        "toChurch": "충현교회 바로가기",
-        "toGether": "게더타운 바로가기"
-      },
       "churchImg": {
         "alt": "충현교회"
       }
     }
   },
   "MainPage": {
-    "title": {
-      "line1": "나의 찰떡",
-      "line2": "선교지",
-      "info": {
-        "line1": "나의 찰떡 선교지는 어디일까요?",
-        "line2": "나에게 어울리는 선교지를 찾아보세요!"
-      }
-    },
     "body": {
       "StartResearchBtn": "검사 시작하기"
     },
@@ -45,6 +33,7 @@
   },
   "ResultPage": {
     "countries": {
+      "moldoba": "몰도바",
       "cambodia": "캄보디아",
       "india": "인도",
       "indonesia": "인도네시아",
@@ -63,6 +52,78 @@
       "btns": {
         "kakaotalk": "카카오톡 공유하기",
         "link": "링크 복사하기"
+      }
+    }
+  },
+  "KakaoShareButton": {
+    "shareToKakaotalk": "카카오톡으로 공유하기",
+    "message": {
+      "resultShareMsg": {
+        "content": {
+          "title": {
+            "line1": "저는",
+            "line2": "이(가) 가장 어울린대요!"
+          },
+          "description": "당신에게 어울리는 선교지는 어디일까요? 지금 검사해보세요!"
+        },
+        "buttons": {
+          "button1": {
+            "title": "은 어떤 곳?"
+          },
+          "button2": {
+            "title": "나도 검사하기"
+          }
+        }
+      },
+      "pageShareMsg": {
+        "content": {
+          "title": "[70주년 선교주일] 선교 MBTI",
+          "description": "당신에게 어울리는 선교지는 어디일까요? 지금 검사해보세요!"
+        },
+        "buttons": {
+          "button1": {
+            "title": "나의 선교지 검사하기"
+          }
+        }
+      }
+    }
+  },
+  "QuestionManagePage": {
+    "countries": {
+      "moldoba": "몰도바",
+      "cambodia": "캄보디아",
+      "india": "인도",
+      "indonesia": "인도네시아",
+      "japan": "일본",
+      "kazakhstan": "카자흐스탄",
+      "laos": "라오스",
+      "mongolia": "몽골",
+      "myanmar": "미얀마",
+      "nepal": "네팔",
+      "srilanka": "스리랑카",
+      "thai": "태국",
+      "vietnam": "베트남"
+    },
+    "title": {
+      "text": "선교지 질문 관리",
+      "btns": {
+        "toOrigin": "원래대로",
+        "add": "추가하기",
+        "save": "저장하기"
+      }
+    },
+    "table": {
+      "delRow": {
+        "delButton": "삭제"
+      }
+    },
+    "functionMessage": {
+      "loadQuestions": {
+        "error": "질문 내역을 불러오는데 오류가 발생하였습니다."
+      },
+      "save": {
+        "success": "저장이 완료되었습니다.",
+        "fail": "저장에 실패하였습니다."
       }
     }
   }

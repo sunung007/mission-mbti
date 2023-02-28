@@ -9,7 +9,7 @@
 
 #ResultPage > .title {
   font-size: 1.3em;
-  font-family: tangsbudaejjigae;
+  font-family: title1;
   font-weight: bold;
   line-height: 1.5em;
   text-align: center;
@@ -36,7 +36,7 @@
   background-color: var(--blue);
 
   font-weight: bold;
-  font-family: tangsbudaejjigae;
+  font-family: title1;
 
   border-radius: 1rem;
 }
@@ -118,10 +118,11 @@
   gap: 0.5em;
 }
 #ResultPage > .share .btns li {
+  width: 3rem;
   cursor: pointer;
 }
 #ResultPage > .share .btns img {
-  width: 3rem;
+  width: 100%;
 }
 
 #ResultPage > .home-btn {

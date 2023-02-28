@@ -2,47 +2,75 @@
   text-align: center;
 }
 
-#MainPage > .title .line1,
-#MainPage > .title .line2 {
-  font-family: tangsbudaejjigae;
-  font-weight: bold;
-  line-height: 1.3em;
-}
-
-#MainPage > .title .line1 {
-  font-size: 2.5rem;
-}
-#MainPage > .title .line2 {
-  font-size: 4rem;
-}
-
-#MainPage .subsection-title {
-  font-weight: bold;
-  margin: 1rem 0;
+#MainPage > .title > .top,
+#MainPage > .title > .title {
+  width: 100%;
+  max-width: 500px;
 }
 
 #MainPage > .body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  height: 300px;
 }
-#MainPage #StartResearchBtn {
+
+#MainPage > .body > .text,
+#MainPage > .body > .img {
   width: 100%;
-  max-width: 30rem;
-  height: 10rem;
-
-  font-size: 1.5rem;
-  font-weight: 900;
-
-  margin: 1rem auto;
-  background-color: var(--blue);
-  color: white;
-
-  transition: background-color 150ms ease-in;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
-#MainPage #StartResearchBtn:hover {
-  background-color: var(--yellow);
+#MainPage > .body > .text {
+  font-family: title1;
+  font-size: 1.2em;
+  margin-top: 0.3em;
+  z-index: 10;
+}
+
+#MainPage > .body > .img {
+  width: 100%;
+  max-width: 250px;
+}
+#MainPage > .body > .img .bagbody {
+  transition: all 100ms ease-in;
+}
+#MainPage > .body > .img:hover .bagbody {
+  fill: var(--yellow);
+}
+
+#MainPage > .to-family {
+  width: 100%;
+  max-width: 500px;
+  margin: 30px auto;
+
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+#MainPage > .to-family > a > svg {
+  width: 100%;
+  max-width: 200px;
+}
+
+#MainPage > .share > .subsection-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+
+  margin-bottom: 1rem;
+  font-size: 1.2em;
+  font-family: title1;
+  line-height: 1rem;
+}
+#MainPage > .share > .subsection-title svg {
+  height: 1.5rem;
 }
 
 #MainPage > .share .copy-msg {
@@ -59,8 +87,9 @@
   gap: 0.5em;
 }
 #MainPage > .share .btns li {
+  width: 3rem;
   cursor: pointer;
 }
 #MainPage > .share .btns img {
-  width: 3rem;
+  width: 100%;
 }

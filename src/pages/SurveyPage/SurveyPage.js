@@ -2,6 +2,7 @@ import "./SurveyPage.css";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {scrollToTopFunc} from "../../hooks/ScrollToTop";
+import {loadAllQuestions} from "../../hooks/firebase";
 import {
   NO,
   NUM_OF_QUESTION_IN_A_PAGE_IN_SURVEY_PAGE,
@@ -11,48 +12,7 @@ import {
 export default function SurveyPage() {
   const navigate = useNavigate();
 
-  const [questions, setQuestions] = useState([
-    {
-      id: 0,
-      question: "나는 어떤 음식이든 잘 먹는다.",
-      result: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    },
-    {
-      id: 1,
-      question: "나는 산보다 바다를 더 좋아한다.",
-      result: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    },
-    {
-      id: 2,
-      question: "나는 산보다 바다를 더 좋아한다.3",
-      result: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    },
-    {
-      id: 3,
-      question: "나는 산보다 바다를 더 좋아한다.4",
-      result: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    },
-    {
-      id: 4,
-      question: "나는 산보다 바다를 더 좋아한다.5",
-      result: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    },
-    {
-      id: 5,
-      question: "나는 산보다 바다를 더 좋아한다.6",
-      result: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    },
-    {
-      id: 6,
-      question: "나는 산보다 바다를 더 좋아한다.7",
-      result: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    },
-    {
-      id: 7,
-      question: "나는 산보다 바다를 더 좋아한다.8",
-      result: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    },
-  ]);
+  const [questions, setQuestions] = useState([]);
   const [pageNumber, setPageNumber] = useState([0, 1]);
   const [answers, setAnswers] = useState([]);
   const [alertMsg, setAlertMsg] = useState("");
@@ -103,18 +63,25 @@ export default function SurveyPage() {
   }, [pageNumber]);
 
   useEffect(() => {
-    if (questions?.length > 0) {
-      let tmpAnswers = new Array(questions?.length);
-      for (let i = 0; i < questions?.length; i++) {
-        tmpAnswers[i] = 0;
-      }
-      setAnswers(tmpAnswers);
-      setPageNumber([
-        1,
-        Math.ceil(questions?.length / NUM_OF_QUESTION_IN_A_PAGE_IN_SURVEY_PAGE),
-      ]);
-    }
+    loadAllQuestions()
+      .then((r) => {
+        setQuestions(r);
 
+        let tmpAnswers = new Array(r.length);
+        for (let i = 0; i < r.length; i++) {
+          tmpAnswers[i] = 0;
+        }
+        setAnswers(tmpAnswers);
+        setPageNumber([
+          1,
+          Math.ceil(r.length / NUM_OF_QUESTION_IN_A_PAGE_IN_SURVEY_PAGE),
+        ]);
+      })
+      .catch((e) => {
+        console.error(e);
+        // TODO : 질문 로딩 실패 페이지
+        window.alert("질문을 불러오는데 실패하였습니다.");
+      });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -143,7 +110,7 @@ export default function SurveyPage() {
             )
             .map((q, qIndex) => (
               <li className="q" key={q?.id || qIndex}>
-                <div className="conts">{q?.question ?? ""}</div>
+                <div className="conts">{q?.q ?? ""}</div>
 
                 <div className="btns">
                   <button

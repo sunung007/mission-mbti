@@ -6,6 +6,8 @@ import LoadingResultPage from "./pages/LoadingResultPage/LoadingResultPage";
 import {useTranslation} from "react-i18next";
 import ResultPage from "./pages/ResultPage/ResultPage";
 import ScrollToTop from "./hooks/ScrollToTop";
+import {ReactComponent as ChurchLogo} from "./assets/images/choonghyun.svg";
+import AdminRouter from "./pages/admin/AdminRouter";
 
 function App() {
   const {t} = useTranslation();
@@ -17,45 +19,25 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/survey" element={<SurveyPage />} />
-          <Route path="/loadingResult" element={<LoadingResultPage />} />
+          <Route exact path="/" element={<MainPage />} />
+          <Route exact path="/survey" element={<SurveyPage />} />
+          <Route exact path="/loadingResult" element={<LoadingResultPage />} />
           <Route path="/result" element={<ResultPage />} />
+          <Route path="/admin/*" element={<AdminRouter />} />
         </Routes>
       </BrowserRouter>
 
       <footer id="MainFooter">
         <div className="container">
+          <div className="church-img">
+            <ChurchLogo />
+          </div>
+
           <p>
             {t("App.footer.info.line1")}
             <br />
             {t("App.footer.info.line2")}
           </p>
-
-          <button className="church-btn">
-            <a
-              href="http://www.choonghyunchurch.or.kr/main/main.html"
-              target={"_blank"}
-              rel="noreferrer"
-            >
-              {t("App.footer.btns.toChurch")}
-            </a>
-          </button>
-          <button className="church-btn">
-            <a
-              href="https://app.gather.town/app/VYEVvurYdVLuQ8NF/Church"
-              target={"_blank"}
-              rel="noreferrer"
-            >
-              {t("App.footer.btns.toGether")}
-            </a>
-          </button>
-          <div className="church-img">
-            <img
-              src={require("./assets/images/church-logo.png")}
-              alt={t("App.footer.churchImg.alt")}
-            />
-          </div>
         </div>
       </footer>
     </div>
